@@ -1,6 +1,7 @@
 import React from 'react';
 import HelloWorld from './hello-world/HelloWorld';
-import TicTacToe from './tic-tac-toe/TicTacToe'
+import TicTacToe from './tic-tac-toe/TicTacToe';
+import Clock from './clock/Clock.js';
 
 export default class App extends React.Component {
     render() {
@@ -8,6 +9,7 @@ export default class App extends React.Component {
             <div>
                 <HelloWorld />
                 <TicTacToe />
+                <Clock />
             </div>
         );
     }
