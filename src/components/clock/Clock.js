@@ -23,6 +23,7 @@ export default class Clock extends React.Component {
     tick() {
         this.setState({ date: new Date() });
     }
+
     render() {
         return (
             <div>
