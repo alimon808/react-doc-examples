@@ -20,9 +20,10 @@ export default class App extends React.Component {
         return (
             <div>
                 <HelloWorld />
-                <Welcome name="Sara" />
-                <TicTacToe />
+                <hr />
+                <Welcome name="Sara" title="Tic Tac Toe" />
                 <Clock />
+                <hr />
                 Comments:
                 <Comment
                     date={comment.date}
