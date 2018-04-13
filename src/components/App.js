@@ -1,10 +1,10 @@
 import React from 'react';
 import HelloWorld from './hello-world/HelloWorld';
-import TicTacToe from './tic-tac-toe/TicTacToe';
 import Clock from './clock/Clock.js';
 import Welcome from './welcome/Welcome';
 import Comment from './comment/Comment';
 import FilterableProductTable from './filterable-product-table/FilterableProductTable';
+import TypeCheckingWithPropTypes from './typechecking-with-proptypes/greeting';
 
 const comment = {
     date: new Date(),
@@ -32,6 +32,7 @@ export default class App extends React.Component {
                 />
                 <hr />
                 <FilterableProductTable />
+                <TypeCheckingWithPropTypes name="John Smith" />
             </div>
         );
     }
