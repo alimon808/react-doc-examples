@@ -6,12 +6,13 @@ export default class Props extends React.Component {
     render() {
         return (
             <div>
-                <h3>{this.props.message}</h3>
+                <h3>{this.props.info}</h3>
             </div>
         );
     }
 }
 
+// sample code pulled from https://reactjs.org/docs/typechecking-with-proptypes.html
 Props.propTypes = {
     // You can declare that a prop is a specific JS stype.  By default, these
     // are all optional

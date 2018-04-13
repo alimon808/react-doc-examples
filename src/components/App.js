@@ -4,7 +4,7 @@ import Clock from './clock/Clock.js';
 import Welcome from './welcome/Welcome';
 import Comment from './comment/Comment';
 import FilterableProductTable from './filterable-product-table/FilterableProductTable';
-import TypeCheckingWithPropTypes from './typechecking-with-proptypes/greeting';
+import TypeCheckingWithPropTypes from './typechecking-with-proptypes/prop-component';
 
 const comment = {
     date: new Date(),
