@@ -2,6 +2,7 @@ import React from 'react';
 import Props from './props';
 import Message from './message';
 
+// parent container of different props
 export default class MyPropComponent extends React.Component {
     render() {
         const requiredProps = {
