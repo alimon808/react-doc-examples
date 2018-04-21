@@ -6,7 +6,8 @@ import Comment from './comment/Comment';
 import FilterableProductTable from './filterable-product-table/FilterableProductTable';
 import TypeCheckingWithPropTypes from './typechecking-with-proptypes/prop-component';
 import SimpleForm from './forms/simple';
-import { NameForm } from './forms/controlled-components';
+import { NameForm } from './forms/name-form';
+import { EssayForm } from './forms/essay-form';
 
 const comment = {
     date: new Date(),
@@ -39,6 +40,8 @@ export default class App extends React.Component {
                 <SimpleForm />
                 <hr />
                 <NameForm />
+                <hr />
+                <EssayForm />
             </div>
         );
     }
