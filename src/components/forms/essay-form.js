@@ -1,3 +1,5 @@
+// https://reactjs.org/docs/forms.html
+// textarea tag
 import React from 'react';
 
 export class EssayForm extends React.Component {
