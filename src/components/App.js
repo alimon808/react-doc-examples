@@ -5,6 +5,7 @@ import Welcome from './welcome/Welcome';
 import Comment from './comment/Comment';
 import FilterableProductTable from './filterable-product-table/FilterableProductTable';
 import TypeCheckingWithPropTypes from './typechecking-with-proptypes/prop-component';
+import SimpleForm from './forms/simple';
 
 const comment = {
     date: new Date(),
@@ -33,6 +34,8 @@ export default class App extends React.Component {
                 <hr />
                 <FilterableProductTable />
                 <TypeCheckingWithPropTypes name="John Smith" />
+                <hr />
+                <SimpleForm />
             </div>
         );
     }
