@@ -10,6 +10,7 @@ import { NameForm } from './forms/name-form';
 import { EssayForm } from './forms/essay-form';
 import FlavorForm from './forms/flavor-form';
 import ReservationForm from './forms/reservation';
+import Calculator from './lifting-state/calculator';
 
 const comment = {
     date: new Date(),
@@ -47,6 +48,8 @@ export default class App extends React.Component {
                 <hr />
                 <FlavorForm />
                 <ReservationForm />
+                <hr />
+                <Calculator />
             </div>
         );
     }

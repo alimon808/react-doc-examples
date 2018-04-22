@@ -17,6 +17,11 @@ export default class Reservration extends React.Component {
             // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names
             [name]: value
         });
+
+        // ES5 equivalent
+        // var partialState = {};
+        // partialState[name] = value;
+        // this.setState({partialState});
     }
 
     render() {
