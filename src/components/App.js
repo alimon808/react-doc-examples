@@ -9,6 +9,7 @@ import SimpleForm from './forms/simple';
 import { NameForm } from './forms/name-form';
 import { EssayForm } from './forms/essay-form';
 import FlavorForm from './forms/flavor-form';
+import ReservationForm from './forms/reservation';
 
 const comment = {
     date: new Date(),
@@ -45,6 +46,7 @@ export default class App extends React.Component {
                 <EssayForm />
                 <hr />
                 <FlavorForm />
+                <ReservationForm />
             </div>
         );
     }
