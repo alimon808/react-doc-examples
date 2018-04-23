@@ -13,7 +13,7 @@ import ReservationForm from './forms/reservation';
 import Calculator from './lifting-state/calculator';
 import SimpleList from './list-and-keys/simple-list';
 import { Blog } from './list-and-keys/blog';
-import Greeting from './conditional-rendering/greeting';
+import LoginControl from './conditional-rendering/login-control';
 
 const comment = {
     date: new Date(),
@@ -59,8 +59,7 @@ export default class App extends React.Component {
                 <hr />
                 <Blog />
                 <hr />
-                <Greeting isLoggedIn={false} />
-                <Greeting isLoggedIn={true} />
+                <LoginControl />
             </div>
         );
     }
