@@ -11,6 +11,7 @@ import { EssayForm } from './forms/essay-form';
 import FlavorForm from './forms/flavor-form';
 import ReservationForm from './forms/reservation';
 import Calculator from './lifting-state/calculator';
+import SimpleList from './list-and-keys/simple-list';
 
 const comment = {
     date: new Date(),
@@ -50,6 +51,9 @@ export default class App extends React.Component {
                 <ReservationForm />
                 <hr />
                 <Calculator />
+                <hr />
+                <div>Simple List</div>
+                <SimpleList numbers={[1, 2, 3, 4, 5]} />
             </div>
         );
     }
