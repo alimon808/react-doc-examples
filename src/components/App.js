@@ -14,6 +14,7 @@ import Calculator from './lifting-state/calculator';
 import SimpleList from './list-and-keys/simple-list';
 import { Blog } from './list-and-keys/blog';
 import LoginControl from './conditional-rendering/login-control';
+import MailBox from './conditional-rendering/mailbox';
 
 const comment = {
     date: new Date(),
@@ -60,6 +61,8 @@ export default class App extends React.Component {
                 <Blog />
                 <hr />
                 <LoginControl />
+                <hr />
+                <MailBox unreadMessages={['React', 'Re: React', 'Re:Re: React']} />
             </div>
         );
     }
