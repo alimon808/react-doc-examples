@@ -15,6 +15,7 @@ import SimpleList from './list-and-keys/simple-list';
 import { Blog } from './list-and-keys/blog';
 import LoginControl from './conditional-rendering/login-control';
 import MailBox from './conditional-rendering/mailbox';
+import Warning from './conditional-rendering/warning';
 
 const comment = {
     date: new Date(),
@@ -63,6 +64,8 @@ export default class App extends React.Component {
                 <LoginControl />
                 <hr />
                 <MailBox unreadMessages={['React', 'Re: React', 'Re:Re: React']} />
+                <hr />
+                <Warning warn={true} />
             </div>
         );
     }
