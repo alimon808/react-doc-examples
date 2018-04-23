@@ -13,6 +13,7 @@ import ReservationForm from './forms/reservation';
 import Calculator from './lifting-state/calculator';
 import SimpleList from './list-and-keys/simple-list';
 import { Blog } from './list-and-keys/blog';
+import Greeting from './conditional-rendering/greeting';
 
 const comment = {
     date: new Date(),
@@ -57,6 +58,9 @@ export default class App extends React.Component {
                 <SimpleList numbers={[1, 2, 3, 4, 5]} />
                 <hr />
                 <Blog />
+                <hr />
+                <Greeting isLoggedIn={false} />
+                <Greeting isLoggedIn={true} />
             </div>
         );
     }
