@@ -16,6 +16,7 @@ import { Blog } from './list-and-keys/blog';
 import LoginControl from './conditional-rendering/login-control';
 import MailBox from './conditional-rendering/mailbox';
 import Warning from './conditional-rendering/warning';
+import Toggle from './handling-events/toggle';
 
 const comment = {
     date: new Date(),
@@ -66,6 +67,8 @@ export default class App extends React.Component {
                 <MailBox unreadMessages={['React', 'Re: React', 'Re:Re: React']} />
                 <hr />
                 <Warning warn={true} />
+                <hr />
+                <Toggle />
             </div>
         );
     }
