@@ -1,5 +1,4 @@
 // todo
-// display the move location (col, row)
 // bold the current the last move
 // use for loop to create board
 // hightlight the winning squares
@@ -13,7 +12,8 @@ export default class TicTacToe extends React.Component {
         this.state = {
             history: [
                 {
-                    squares: Array(9).fill(null)
+                    squares: Array(9).fill(null),
+                    selectedSquare: null
                 }
             ],
             xIsNext: true,
@@ -41,12 +41,23 @@ export default class TicTacToe extends React.Component {
         return null;
     }
 
+    // retrieve square position (col, row)
+    calculatePosition(i) {
+        const positions = [
+            [1, 1], [2, 1], [3, 1],
+            [1, 2], [2, 2], [3, 2],
+            [1, 3], [2, 3], [3, 3]
+        ];
+        return positions[i];
+    }
+
     jumpTo(step) {
         this.setState({
             stepNumber: step,
             xIsNext: (step % 2) === 0
-        })
+        });
     }
+
     handleClick(i) {
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
@@ -57,7 +68,8 @@ export default class TicTacToe extends React.Component {
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         this.setState({
             history: history.concat([{
-                squares: squares
+                squares: squares,
+                selectedSquare: i
             }]),
             xIsNext: !this.state.xIsNext,
             stepNumber: history.length
@@ -68,8 +80,9 @@ export default class TicTacToe extends React.Component {
         const history = this.state.history;
         const current = history[this.state.stepNumber];
         const winner = this.calculateWinner(current.squares);
-        const moves = history.map((step, move) => {
-            const desc = move ? 'Go to move #' + move : 'Go to game start';
+        const moves = history.map((elem, move) => {
+            const colRow = this.calculatePosition(elem.selectedSquare);
+            const desc = move ? 'Go to move #' + move + ': (' + colRow + ')' : 'Go to game start';
             return (
                 <li key={move}>
                     <button onClick={() => this.jumpTo(move)}>{desc}</button>
