@@ -6,15 +6,13 @@ export default class Toggle extends React.Component {
         this.state = { isToggleOn: true };
         this.handleClick = this.handleClick.bind(this);
     }
-
     handleClick() {
         this.setState(prevState => ({ isToggleOn: !prevState.isToggleOn }));
     }
     render() {
         return (
             <label>
-                Toggle:
-                <button onClick={this.handleClick}>{this.state.isToggleOn ? 'ON' : 'OFF'}</button>
+                Toggle: <button onClick={this.handleClick}>{this.state.isToggleOn ? 'ON' : 'OFF'}</button>
             </label>
         );
     }

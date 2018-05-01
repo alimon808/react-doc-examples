@@ -1,3 +1,9 @@
+// todo
+// display the move location (col, row)
+// bold the current the last move
+// use for loop to create board
+// hightlight the winning squares
+// display draw if no one wins
 import React from 'react';
 import Board from './Board.js';
 
