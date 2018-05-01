@@ -1,5 +1,4 @@
 // todo
-// bold the current the last move
 // use for loop to create board
 // hightlight the winning squares
 // display draw if no one wins
@@ -99,7 +98,7 @@ export default class TicTacToe extends React.Component {
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
+                    <Board selectedSquare={history[this.state.stepNumber].selectedSquare} squares={current.squares} onClick={(i) => this.handleClick(i)} />
                 </div>
                 <div className="game-info">
                     <div>{status}</div>
