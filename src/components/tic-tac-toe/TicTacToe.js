@@ -19,6 +19,25 @@ export default class TicTacToe extends React.Component {
         }
     }
 
+    hightlightWinningLine(squares) {
+        const lines = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6],
+        ];
+        for (let i = 0; i < lines.length; i++) {
+            const [a, b, c] = lines[i];
+            if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+                return lines[i];
+            }
+        }
+    }
+
     calculateWinner(squares) {
         const lines = [
             [0, 1, 2],
@@ -89,7 +108,10 @@ export default class TicTacToe extends React.Component {
         });
 
         let status;
+        let line;
         if (winner) {
+            // hightlight winnin squares
+            line = this.hightlightWinningLine(current.squares);
             status = 'Winner: ' + winner;
         } else {
             status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
@@ -97,7 +119,7 @@ export default class TicTacToe extends React.Component {
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board selectedSquare={history[this.state.stepNumber].selectedSquare} squares={current.squares} onClick={(i) => this.handleClick(i)} />
+                    <Board winningLine={line} selectedSquare={history[this.state.stepNumber].selectedSquare} squares={current.squares} onClick={(i) => this.handleClick(i)} />
                 </div>
                 <div className="game-info">
                     <div>{status}</div>

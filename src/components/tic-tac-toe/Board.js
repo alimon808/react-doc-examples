@@ -3,7 +3,12 @@ import Square from './Square';
 
 export default class Board extends React.Component {
     renderSquare(i) {
-        const selectedSquare = this.props.selectedSquare === i;
+        let selectedSquare;
+        if (this.props.winningLine) {
+            selectedSquare = this.props.winningLine.includes(i);
+        } else {
+            selectedSquare = this.props.selectedSquare === i;
+        }
         return <Square key={i} selected={selectedSquare} value={this.props.squares[i]} onClick={() => this.props.onClick(i)} />;
     }
 
