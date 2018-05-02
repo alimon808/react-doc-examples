@@ -1,6 +1,3 @@
-// todo
-// hightlight the winning squares
-// display draw if no one wins
 import React from 'react';
 import Board from './Board.js';
 
@@ -110,11 +107,10 @@ export default class TicTacToe extends React.Component {
         let status;
         let line;
         if (winner) {
-            // hightlight winnin squares
             line = this.hightlightWinningLine(current.squares);
             status = 'Winner: ' + winner;
         } else {
-            status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+            status = history.length === 10 ? 'Draw' : 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
         }
         return (
             <div className="game">
