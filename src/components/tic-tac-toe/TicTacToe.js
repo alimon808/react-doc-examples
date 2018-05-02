@@ -115,7 +115,12 @@ export default class TicTacToe extends React.Component {
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board winningLine={line} selectedSquare={history[this.state.stepNumber].selectedSquare} squares={current.squares} onClick={(i) => this.handleClick(i)} />
+                    <Board
+                        winningLine={line}
+                        selectedSquare={history[this.state.stepNumber].selectedSquare}
+                        squares={current.squares}
+                        onClick={(i) => this.handleClick(i)}
+                    />
                 </div>
                 <div className="game-info">
                     <div>{status}</div>
